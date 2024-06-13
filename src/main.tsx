@@ -1,10 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from "react-dom/client";
+import {BrowserRouter} from "react-router-dom";
 import App from './App.tsx'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const root = document.getElementById('root');
+
+if (!root) {
+    throw new Error('root not found!');
+}
+
+const container = createRoot(root);
+
+container.render(
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>
 )

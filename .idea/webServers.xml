@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d2ebffd5-fc69-4d68-a064-3df9e33c5453" name="vip26.hosting.reg.ru" url="http://vip26.hosting.reg.ru">
+        <fileTransfer host="vip26.hosting.reg.ru" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
