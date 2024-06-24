@@ -1,0 +1,16 @@
+.header {
+    max-width: 100%;
+
+    @media all and (min-width: 1400px) {
+        .container {
+            max-width: 100%;
+            padding: 0 64px;
+        }
+    }
+}
+
+.innerPage {
+    right: 0;
+    left: auto !important;
+    transform: translateX(0) !important;
+}

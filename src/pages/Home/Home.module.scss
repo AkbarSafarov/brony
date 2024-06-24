@@ -1,0 +1,40 @@
+
+.h1 {
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 120%;
+    text-align: center;
+    color: #000;
+    margin-bottom: 47px;
+
+    @media all and (max-width: 1360px){
+        font-size: 45px;
+    }
+
+    @media all and (max-width: 767px){
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+}
+
+.search {
+
+    input {
+        height: 84px;
+        padding: 32px !important;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 83%;
+        color: #000;
+        outline: none;
+        background: #fff;
+        border: 2px solid #000 !important;
+        border-radius: 68px;
+
+        @media all and (max-width: 767px) {
+            height: 56px;
+            padding: 16px !important;
+            font-size: 18px;
+        }
+    }
+}
