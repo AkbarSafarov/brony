@@ -4,6 +4,8 @@ import { registrationStore } from "../../store/RegistrationStore";
 import { Step1 } from './Step1.tsx';
 import { Step2 } from './Step2.tsx';
 import { Step3 } from './Step3.tsx';
+import { Step4 } from './Step4.tsx';
+import { Step5 } from './Step5.tsx';
 import s from "./RegistrationSteps.module.scss";
 
 export const RegistrationSteps: React.FC = observer(() => {
@@ -15,10 +17,10 @@ export const RegistrationSteps: React.FC = observer(() => {
                 return <Step2 />;
             case 3:
                 return <Step3 />;
-            // case 4:
-            //     return <Step4 />;
-            // case 5:
-            //     return <Step5 />;
+            case 4:
+                return <Step4 />;
+            case 5:
+                return <Step5 />;
             // case 6:
             //     return <Step6 />;
             default:

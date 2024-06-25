@@ -6,6 +6,18 @@ import {Input} from "../Input";
 
 export const Step3: React.FC = observer(() => {
     const [details, setDetails] = useState(registrationStore.userDetails);
+    const [logoPreview, setLogoPreview] = useState<string | null>(null);
+
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0] || null;
+        if (file) {
+            const fileURL = URL.createObjectURL(file);
+            setLogoPreview(fileURL);
+            registrationStore.setUserDetails({ logo: file });
+        } else {
+            setLogoPreview(null);
+        }
+    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setDetails({ ...details, [e.target.name]: e.target.value });
@@ -21,21 +33,26 @@ export const Step3: React.FC = observer(() => {
     };
 
     return (
-        <div>
+        <div className={s.step_form}>
+            <div className={s.countStep}>1 / 3</div>
             <div className={s.step_name}>Вы успешно создали аккаунт!</div>
             <div className={s.step_text}>Осталось только настроить, чтобы клиентам было проще найти Вас</div>
             <div>
                 <label className={s.fileUpload}>
                     <b>Загрузите ваш лого</b>
                     <span>Если оно у вас не имеется можете загрузить свою фотографию</span>
+                    <span
+                        className={s.image}
+                        style={logoPreview ? { backgroundImage: `url(${logoPreview})`, backgroundSize: 'cover'} : undefined}
+                    ></span>
                     <input
                         type="file"
                         name="logo"
-                        onChange={(e) => registrationStore.setUserDetails({ logo: e.target.files?.[0] || null })}
+                        onChange={handleFileChange}
                     />
                 </label>
             </div>
-            <div>
+            <div className={`${s.field} ${s.firstName}`}>
                 <Input
                     name="firstName"
                     value={details.firstName}
@@ -43,7 +60,7 @@ export const Step3: React.FC = observer(() => {
                     onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className={`${s.field} ${s.lastName}`}>
                 <Input
                     name="lastName"
                     value={details.lastName}
@@ -51,7 +68,7 @@ export const Step3: React.FC = observer(() => {
                     onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className={`${s.field} ${s.phoneNumber}`}>
                 <Input
                     name="phoneNumber"
                     value={registrationStore.phoneNumber}
@@ -59,7 +76,7 @@ export const Step3: React.FC = observer(() => {
                     onChange={handleChange}
                 />
             </div>
-            <div>
+            <div className={`${s.field} ${s.address}`}>
                 <Input
                     name="address"
                     value={details.address}
