@@ -1,0 +1,21 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-left: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #191B32;
+  font-size: 10px;
+  padding: 7px 8px;
+  margin: 8px 0;
+  border: 1px solid #191B32;
+  background: #fff;
+  height: 32px;
+}

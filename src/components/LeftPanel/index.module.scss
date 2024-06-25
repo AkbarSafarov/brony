@@ -1,0 +1,28 @@
+.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.backButton {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  border-radius: 250px;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.32px;
+  background: #191B32;
+  color: #fff;
+}
