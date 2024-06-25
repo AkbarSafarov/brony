@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from 'react-router-dom';
 import logo  from '../../assets/images/logo/logo-dark.svg';
 import s from './Header.module.scss';
@@ -12,7 +12,11 @@ export const Header: React.FC<HeaderProps> = ({hideLogin}) => {
     const containerClasses = `container ${s.container}`;
     const innerClass = hideLogin ? s.innerPage : '';
     const langClass = `menu-block-wrapper ${innerClass}`;
+    const [lang, setLang] = useState(false);
 
+    const langHandle = () => {
+        setLang(!lang);
+    }
     return (
         <header className={headerClasses} id="sticky-menu">
             <div className={containerClasses}>
@@ -26,24 +30,26 @@ export const Header: React.FC<HeaderProps> = ({hideLogin}) => {
                         <nav className="menu-block" id="append-menu-header">
                             <ul className="site-menu-main">
                                 <li className="nav-item nav-item-has-children">
-                                    <a href="#" className="nav-link-item drop-trigger">Русский <i className="fas fa-angle-down"></i></a>
-                                    <ul className="sub-menu" id="submenu-1">
-                                        <li className="sub-menu--item">
-                                            <a href="/">
-                                                <span className="menu-item-text">English</span>
-                                            </a>
-                                        </li>
-                                        <li className="sub-menu--item">
-                                            <a href="/index-02">
-                                                <span className="menu-item-text">O'zbekcha</span>
-                                            </a>
-                                        </li>
-                                        <li className="sub-menu--item">
-                                            <a href="/index-03">
-                                                <span className="menu-item-text">Русский</span>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                    <a href="#" onClick={langHandle} className="nav-link-item drop-trigger">Русский <i className="fas fa-angle-down"></i></a>
+                                    {lang && (
+                                        <ul className="sub-menu" id="submenu-1">
+                                            <li className="sub-menu--item">
+                                                <a href="/">
+                                                    <span className="menu-item-text">English</span>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu--item">
+                                                <a href="/index-02">
+                                                    <span className="menu-item-text">O'zbekcha</span>
+                                                </a>
+                                            </li>
+                                            <li className="sub-menu--item">
+                                                <a href="/index-03">
+                                                    <span className="menu-item-text">Русский</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    )}
                                 </li>
                             </ul>
                         </nav>
