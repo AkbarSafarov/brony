@@ -52,7 +52,6 @@ html {
 
 body,
 #root{
-	height: 100% !important;
 	color: var(--body-color);
 	font-family: Inter, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -61,7 +60,7 @@ body,
 	text-rendering: optimizeLegibility;
 	font-weight: 400;
 	overflow-x: hidden;
-	background-color: var(--light-bg1);
+	background-color: var(--light-bg10);
 	counter-reset: my-sec-counter;
 	font-size: 21px;
 	line-height: 30px;

@@ -689,16 +689,7 @@
     align-items: center;
   }
   .site-header .menu-block {
-    position: fixed;
-    width: 320px;
-    background-color: #ffffff;
-    left: 0;
-    top: 0;
-    height: 100%;
-    overflow: hidden;
-    transform: translate(-100%);
-    transition: all 0.5s ease;
-    z-index: 1099;
+
   }
   .site-header .menu-block.active {
     transform: translate(0%);
@@ -1021,4 +1012,20 @@ a.log-in-btn:hover:after {
 .brony-hero-section {
   padding-left: 16px;
   padding-right: 16px;
+}
+
+@media all and (max-width: 990px) {
+  .site-menu-main .nav-link-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 60px;
+    padding: 0;
+    width: 48px;
+    height: 30px;
+    font-size: 0;
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 8C14 11.3137 11.3137 14 8 14M14 8C14 4.68629 11.3137 2 8 2M14 8H2M8 14C4.68629 14 2 11.3137 2 8M8 14C9.10457 14 10 11.3137 10 8C10 4.68629 9.10457 2 8 2M8 14C6.89543 14 6 11.3137 6 8C6 4.68629 6.89543 2 8 2M2 8C2 4.68629 4.68629 2 8 2' stroke='%23212121' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E") 50% no-repeat;
+  }
+
+  .site-menu-main .nav-link-item i {
+    display: none;
+  }
 }

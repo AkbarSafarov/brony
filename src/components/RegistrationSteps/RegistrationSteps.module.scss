@@ -272,3 +272,91 @@
         }
     }
 }
+
+.serviceList {
+    padding-bottom: 24px;
+
+    .item {
+        padding: 16px 0;
+        border-bottom: 1px solid #e4e4e7;
+        position: relative;
+
+        .itemName {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-right: 32px;
+
+            .name {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 120%;
+                letter-spacing: -0.03em;
+                color: #191b32;
+            }
+
+            .price {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 120%;
+                letter-spacing: -0.03em;
+                color: #191b32;
+            }
+        }
+
+        .distance {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: -0.03em;
+            color: #191b32;
+            padding-bottom: 8px;
+        }
+
+        .edit {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: -0.03em;
+            color: #191b32;
+            cursor: pointer;
+            opacity: .5;
+            display: inline-block;
+        }
+
+        .action {
+            position: absolute;
+            top: 16px;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            background: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.9999 5.3001C7.11625 5.3001 6.3999 4.58375 6.3999 3.7001C6.3999 2.81644 7.11625 2.1001 7.9999 2.1001C8.88356 2.1001 9.5999 2.81644 9.5999 3.7001C9.5999 4.58375 8.88356 5.3001 7.9999 5.3001Z' fill='%23111827' /%3E%3Cpath d='M7.9999 10.1001C7.11625 10.1001 6.3999 9.38375 6.3999 8.5001C6.3999 7.61644 7.11625 6.9001 7.9999 6.9001C8.88356 6.9001 9.5999 7.61644 9.5999 8.5001C9.5999 9.38375 8.88356 10.1001 7.9999 10.1001Z' fill='%23111827' /%3E%3Cpath d='M7.9999 14.9001C7.11625 14.9001 6.3999 14.1838 6.3999 13.3001C6.3999 12.4164 7.11625 11.7001 7.9999 11.7001C8.88356 11.7001 9.5999 12.4164 9.5999 13.3001C9.5999 14.1838 8.88356 14.9001 7.9999 14.9001Z' fill='%23111827' /%3E%3C/svg%3E") 50% no-repeat;
+            cursor: pointer;
+        }
+    }
+}
+
+.last_step {
+    text-align: center;
+
+    .step_text_last {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 120%;
+        color: #000;
+        padding-bottom: 8px;
+    }
+
+    .storeBtn {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        padding: 24px;
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+    }
+}
