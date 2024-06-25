@@ -1,11 +1,12 @@
 import {Tabs, TabsProps} from "antd";
+import {runtime} from "../../store/runtime.ts";
 import TabFirst from "./TabFirst";
 import BackButton from "../../assets/back.svg";
 import ShareButton from "../../assets/share.svg";
-import s from './index.module.scss';
 import avatar from "../../assets/avatar.png";
 import phone from "../../assets/phone.svg";
 import location from "../../assets/location.svg";
+import s from './index.module.scss';
 
 const Popup = () => {
     const onChange = (key: string) => {
@@ -33,7 +34,7 @@ const Popup = () => {
     return (
         <div className={s.popup}>
             <div className={s.popupTop}>
-                <button className={s.backButton}><img src={BackButton}/></button>
+                <button onClick={() => runtime.setPopup('')} className={s.backButton}><img src={BackButton}/></button>
                 <button className={s.shareButton}><img src={ShareButton}/></button>
             </div>
             <div className={s.employeeItem}>

@@ -64,7 +64,6 @@ body,
 	background-color: var(--light-bg1);
 	counter-reset: my-sec-counter;
 	font-size: 21px;
-	line-height: 30px;
 	min-height: 100%;
 }
 
