@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react-lite';
 import pin from '../../assets/pin.svg';
-import {YMaps, Map, Placemark, ZoomControl, FullscreenControl, GeolocationControl} from 'react-yandex-maps';
+import {YMaps, Map, Placemark, ZoomControl, FullscreenControl, GeolocationControl} from '@pbe/react-yandex-maps';
 import salonStore, {IService} from '../../store';
 
 export const YaMap = observer(() => {
