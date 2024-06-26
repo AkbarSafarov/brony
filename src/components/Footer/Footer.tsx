@@ -1,7 +1,12 @@
-import React from "react";
+import {FC} from "react";
+import {useNavigate} from "react-router-dom";
 import logo  from '../../assets/images/logo/logo-dark.svg';
 
-export const Footer: React.FC = () => {
+export const Footer: FC = () => {
+    const navigate = useNavigate();
+    const onClick = () => {
+        navigate('/services');
+    };
 
     return (
         <footer className="brony-footer-section main-footer white-bg">
@@ -10,9 +15,9 @@ export const Footer: React.FC = () => {
                     <div className="row">
                         <div className="col-xl-4 col-lg-12">
                             <div className="brony-footer-textarea">
-                                <a href="">
+                                <button onClick={() => onClick()}>
                                     <img src={logo} alt="" />
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
