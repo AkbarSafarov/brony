@@ -100,13 +100,23 @@ button:focus-visible {
 }
 
 .ant-tabs .ant-tabs-tab {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 19.2px;
   color: #191B32;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.ant-tabs .ant-tabs-tab+.ant-tabs-tab {
+  margin: 0;
 }
 
 .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
   color: #191B32;
   text-shadow: 0 0 0.25px #191B32;
+}
+
+.ant-tabs .ant-tabs-ink-bar {
+  background: #191B32;
 }

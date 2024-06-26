@@ -9,7 +9,6 @@ const TabFirst = observer(() => {
     const [value, setValue] = useState<number>();
 
     const onChangeRadio = (e: RadioChangeEvent) => {
-        console.log('radio checked', e.target.value);
         setValue(e.target.value);
     };
 
