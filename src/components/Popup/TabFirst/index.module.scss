@@ -2,6 +2,7 @@
 .hours {
   display: flex;
   margin-bottom: 16px;
+  overflow-x: auto;
 }
 
 .daysItem,
