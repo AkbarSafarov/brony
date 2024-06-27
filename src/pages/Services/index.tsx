@@ -13,7 +13,9 @@ export const Services = observer(() => {
                 <LeftPanel/>
             </div>
             <div className={s.right}>
-                <Tabs />
+                <div className={s.tabsWrapper}>
+                    <Tabs />
+                </div>
                 <YaMap />
             </div>
             {runtime.popup === 'master' && <Popup />}

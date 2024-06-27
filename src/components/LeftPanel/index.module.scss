@@ -13,16 +13,67 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 590;
+  line-height: 22px;
+  text-align: left;
+  color: #191B32;
 }
 
-.addButton {
+.addButton,
+.mapButton,
+.listButton{
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 250px;
   gap: 4px;
   font-size: 12px;
   font-weight: 700;
-  line-height: 14.32px;
   background: #191B32;
   color: #fff;
+}
+
+.masters {
+  display: none;
+}
+
+.mapButton {
+  display: none;
+}
+
+.listButton {
+  display: none;
+}
+
+@media all and (min-width: 1025px) {
+  .tabsWrapper {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1024px) {
+
+  .top {
+    margin-bottom: 20px;
+  }
+
+  .backButton {
+    width: auto;
+    height: auto;
+  }
+
+  .addButton {
+    display: none;
+  }
+
+  .masters {
+    display: block;
+  }
+  
+  .mapButton,
+  .listButton{
+    display: block;
+  }
 }

@@ -81,3 +81,43 @@
   width: 52px;
   height: 30px;
 }
+
+.eTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.eTitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: #9c9c9c;
+  margin-right: auto;
+  
+  span {
+    font-weight: 700;
+    color: #191B32;
+  }
+}
+
+.eSearch {
+  margin-right: 24px;
+}
+
+.eSearch,
+.eFilter {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+@media all and (max-width: 1024px) {
+  .dn {
+    display: none;
+  }
+
+  .db {
+    display: block;
+  }
+}

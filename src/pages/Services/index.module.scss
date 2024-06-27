@@ -11,3 +11,26 @@
 .right {
   width: calc(100% - 358px);
 }
+
+@media all and (max-width: 1024px) {
+  .left {
+    padding: 20px;
+  }
+  .tabsWrapper {
+    display: none;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+}

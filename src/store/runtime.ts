@@ -2,6 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class Runtime {
     popup = '';
+    visibleOnMedia = 'map';
 
     constructor() {
         makeAutoObservable(this);
@@ -9,6 +10,10 @@ class Runtime {
 
     setPopup(value: string) {
         this.popup = value;
+    }
+
+    setVisibleOnMedia(value: string) {
+        this.visibleOnMedia = value;
     }
 }
 
