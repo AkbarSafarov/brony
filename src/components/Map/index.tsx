@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
 import { YMaps, Map, Placemark, ZoomControl, FullscreenControl, GeolocationControl } from '@pbe/react-yandex-maps';
 import salonStore, { IService } from '../../store';
-import pin from '../../assets/pin.svg';
+import pinn from '../../assets/pinn.png';
 import {runtime} from "../../store/runtime.ts";
 import s from './index.module.scss';
 
@@ -31,7 +31,7 @@ export const YaMap = observer(() => {
                             }}
                             options={{
                                 iconLayout: 'default#image',
-                                iconImageHref: pin,
+                                iconImageHref: pinn,
                                 iconImageSize: [30, 30],
                                 iconImageOffset: [-15, -30]
                             }}
